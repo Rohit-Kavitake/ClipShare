@@ -1,0 +1,15 @@
+.join-board {
+	padding: 40px;
+	background: white;
+	.join-input {
+		.ant-input-affix-wrapper,
+		.ant-input-affix-wrapper-lg {
+			border-top-left-radius: 20px;
+			border-bottom-left-radius: 20px;
+		}
+        .ant-input-group-addon{
+		.ant-input-search-button {
+			border-radius: 0 20px 20px 0;
+		}}
+	}
+}
