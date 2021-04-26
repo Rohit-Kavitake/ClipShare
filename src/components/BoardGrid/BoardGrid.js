@@ -17,6 +17,8 @@ const BoardGrid = () => {
 		setBoards(collection.docs);
 	}, []);
 
+	
+
 	useEffect(() => {
 		getData();
 	}, [getData]);
@@ -25,7 +27,7 @@ const BoardGrid = () => {
 		return boards.map((data, index) => {
 			return (
 				<Col key={index} xs={24} sm={12} lg={6} xl={4}>
-					<BoardTile data={data} />
+					<BoardTile data={data} getData ={getData} />
 				</Col>
 			);
 		});

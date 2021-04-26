@@ -18,6 +18,11 @@ const Board = () => {
 	},[id]
 	);
 
+	// const DeleteCip = async (docId) => {
+	// 	const deleteClip = await db.collection('Board').doc(docId).delete()
+	// 	console.log("Document Deleted");
+	// }
+
 	useEffect(() => {
 		getData();
 	}, [getData]);
