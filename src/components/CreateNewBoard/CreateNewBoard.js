@@ -1,5 +1,5 @@
 import { React, useState } from "react";
-import { Button, Modal, Input } from "antd";
+import { Button, Modal, Input, message } from "antd";
 import db from "../../firebase";
 import firebase from "firebase";
 
@@ -28,6 +28,7 @@ const CreateNewBoard = ({ className, getData }) => {
 		});
 		setTimeout(() => {
 			setIsModalVisible(false);
+			message.success(`Clip  ${Title} Created`)
 		}, 500);
 		setData("");
 		setTitle("");
