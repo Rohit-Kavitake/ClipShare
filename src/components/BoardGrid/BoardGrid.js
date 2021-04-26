@@ -9,15 +9,16 @@ const BoardGrid = () => {
 	const [boards, setBoards] = useState([]);
 
 	const getData = useCallback(async () => {
-		const collection = await db
-			.collection("Board")
+		let collection = "Board"
+		const BoardData = await db
+			.collection(collection)
 			.orderBy("createdAt", "desc")
 			.get();
 		// console.log("collection: ", collection.docs);
-		setBoards(collection.docs);
+		setBoards(BoardData.docs);
 	}, []);
 
-	
+
 
 	useEffect(() => {
 		getData();

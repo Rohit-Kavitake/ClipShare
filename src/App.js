@@ -22,7 +22,7 @@ function App() {
 							<BoardGrid />
 						</Content>
           </Route>
-          <Route path="/:id" >
+          <Route path="/:name/:id" >
             <Board />
           </Route>
 				</Switch>

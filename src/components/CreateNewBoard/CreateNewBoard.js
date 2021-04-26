@@ -19,8 +19,9 @@ const CreateNewBoard = ({ className, getData }) => {
 	};
 
 	const createBoard = async () => {
+		let collection = "Board"; /// to be changed when Oauth Functionality added
 		// eslint-disable-next-line
-		const document = await db.collection("Board").add({
+		const document = await db.collection(collection).add({
 			title: Title,
 			data: Data,
 			createdAt: firebase.firestore.FieldValue.serverTimestamp(),
@@ -28,8 +29,8 @@ const CreateNewBoard = ({ className, getData }) => {
 		setTimeout(() => {
 			setIsModalVisible(false);
 		}, 500);
-		setData("")
-		setTitle("")
+		setData("");
+		setTitle("");
 		getData();
 	};
 	return (
@@ -46,11 +47,15 @@ const CreateNewBoard = ({ className, getData }) => {
 				<Input
 					placeholder="Enter Clip Title"
 					value={Title}
+					addonBefore="Title :"
+					size = "large"
 					onChange={(e) => setTitle(e.target.value)}
 				/>
 				<TextArea
 					placeholder="Enter Clip Data"
 					value={Data}
+					showCount={true}
+					rows = {6}
 					onChange={(e) => setData(e.target.value)}
 				/>
 			</Modal>
