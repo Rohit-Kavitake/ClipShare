@@ -8,7 +8,7 @@ function BoardTile({ data, getData }) {
 	const docTitle = data.get("title");
 	const docId = data.id;
 
-	const DeleteClip = async (Id) => {
+	const DeleteBoard = async (Id) => {
 		// eslint-disable-next-line
 		const deleteData = await db.collection(collection).doc(Id).delete();
 		getData();
@@ -23,17 +23,17 @@ function BoardTile({ data, getData }) {
 		<div className="board-tile">
 			<h1>{docTitle}</h1>
 			<Link to={`/${collection}/${docId}`}>
-				<Button type="primary">Go to this Clip</Button>
+				<Button type="primary">Go to this Board</Button>
 			</Link>
 			<Popconfirm
 				title="Are you sure to delete this Clip?"
-				onConfirm={() => DeleteClip(docId)}
+				onConfirm={() => DeleteBoard(docId)}
 				onCancel={cancel}
 				okText="Yes"
 				cancelText="No"
 			>
 				<Button type="primary" danger>
-					Delete Clip
+					Delete Board
 				</Button>
 			</Popconfirm>
 		</div>

@@ -5,7 +5,7 @@ import './footer.scss'
 const { Footer } = Layout;
 
 function FooterBottom() {
-	return <Footer className="page-footer">CopyRight &copy; | ClipShare</Footer>;
+	return <Footer className="page-footer">CopyRight &copy; | BoardShare</Footer>;
 }
 
 export default FooterBottom;

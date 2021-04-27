@@ -6,7 +6,7 @@ const { Header } = Layout;
 function TopHeader() {
 	return <Header className="top-header">
         <div className="brand-name">
-            <h2>ClipShare</h2>
+            <h2>BoardShare</h2>
         </div>
     </Header>;
 }

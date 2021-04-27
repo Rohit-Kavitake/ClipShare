@@ -3,24 +3,21 @@ import { Input } from "antd";
 import "./JoinBoard.scss";
 // import {Redirect} from 'react-router-dom'
 
-// import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 const { Search } = Input;
 
 function JoinBoard() {
+    const history = useHistory();
 	const onSearch = (value) => {
-		// <Link to={`/${value}`} />;
-		// const history = useHistory();
-		// history.push(`/${value}`)
-		window.location.pathname = `/${value}`
-		// <Redirect to={`${value}`} />
+		history.push(`/${value}`)
 	};
 
 	return (
 		<div className="join-board">
 			<Search
 				className="join-input"
-				placeholder="Enter ClipShare Link"
+				placeholder="Enter BoardShare Link"
 				allowClear
 				enterButton="Join"
 				size="large"

@@ -40,20 +40,20 @@ const CreateNewBoard = ({ className, getData }) => {
 				Create New Board
 			</Button>
 			<Modal
-				title="Create New Clip"
+				title="Create New Board"
 				visible={isModalVisible}
 				onOk={createBoard}
 				onCancel={handleCancel}
 			>
 				<Input
-					placeholder="Enter Clip Title"
+					placeholder="Enter Board Title"
 					value={Title}
 					addonBefore="Title :"
 					size = "large"
 					onChange={(e) => setTitle(e.target.value)}
 				/>
 				<TextArea
-					placeholder="Enter Clip Data"
+					placeholder="Enter Board Data"
 					value={Data}
 					showCount={true}
 					rows = {6}
